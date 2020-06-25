@@ -16,9 +16,14 @@ var quantityPurchase = function () {
             "Update products set ? WHERE ?",
             [
                 {
-                    stock_quantity: quantity
+                    stock_quantity: quantityPicked
+                }
+                {
+                    item_id: quantityID
                 }
             ]
+            console.log("Purchase Successful!"),
+            displayPurchase();
         ]
 
     })
